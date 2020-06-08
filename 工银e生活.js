@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-05 18:48:50
+ * @LastEditTime: 2020-06-08 11:00:03
  */ 
 auto.waitFor();
 
@@ -39,6 +39,4 @@ sleep(5000);
 className("android.view.View").text("点击签到").findOne().click();
 toast("签到");
 log("签到");
-sleep(5000);
-
 exit();

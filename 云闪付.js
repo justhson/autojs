@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-07 18:12:33
+ * @LastEditTime: 2020-06-08 11:00:46
  */ 
 auto.waitFor();
 
@@ -33,9 +33,7 @@ if(className("android.widget.TextView").textContains("已签到").exists()){
     toast("今日已签到");
     log("今日已签到");
     sleep(1000);
-
     chouJiang();
-
     exit();
 }
 
@@ -44,8 +42,8 @@ click(bounds.centerX(), bounds.centerY());
 toast("签到");
 log("签到");
 sleep(1000);
-
 chouJiang();
+exit();
 
 function chouJiang(){
     if(className("android.widget.TextView").text("去抽奖").exists()){
@@ -60,5 +58,3 @@ function chouJiang(){
         log("抽奖");
     }
 }
-
-exit();
