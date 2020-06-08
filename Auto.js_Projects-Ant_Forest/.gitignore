@@ -1,0 +1,10 @@
+*.apk
+*.exe
+/.idea
+/.test
+/build
+/captures
+/Github_Materials
+/Log
+/release
+/Tools/Accessibility_Settings.js
