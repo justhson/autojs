@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-08 17:19:00
+ * @LastEditTime: 2020-06-08 17:28:24
  */ 
 auto.waitFor();
 
@@ -119,5 +119,6 @@ function doShare(i){
     log(bounds);
     toast("上滑");
     log("上滑");
+    // 最后一个控件的上边是2048
     swipe(bounds.centerX(), 2040, bounds.centerX(), bounds.centerY(), 1000);
 }
