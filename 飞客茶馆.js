@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-08 17:28:24
+ * @LastEditTime: 2020-06-09 11:02:10
  */ 
 auto.waitFor();
 
@@ -16,16 +16,18 @@ auto.waitFor();
 // let PackageName = getPackageName(appName);
 // log(PackageName);
 let packageName = "com.ideal.flyerteacafes";
-launch(packageName);
-toast("打开");
-log("打开");
-sleep(5000);
+// launch(packageName);
+// toast("打开");
+// log("打开");
+// sleep(5000);
 
-sign();
+// sign();
 
-back();
+// back();
 
-share();
+// share();
+
+reward();
 
 exit();
 
@@ -84,6 +86,15 @@ function share(i){
  * @return: 
  */
 function doShare(i){
+    // 如果是官方的广告，继续下滑
+    if(className("android.widget.TextView").id("userName").findOne().text() === "官方"){
+        let temp = className("android.widget.TextView").id("title").findOne().parent().bounds();
+        toast("跳过广告");
+        log("跳过广告");
+        // 最后一个控件的上边是2048
+        swipe(temp.centerX(), 2040, temp.centerX(), temp.centerY(), 1000);
+    }
+
     className("android.widget.TextView").id("title").findOne().parent().click();
     toast("进入第"+i+"个帖子");
     log("进入第"+i+"个帖子");
@@ -116,9 +127,37 @@ function doShare(i){
     sleep(2000);
 
     bounds = className("android.widget.TextView").id("title").findOne().parent().bounds();
-    log(bounds);
     toast("上滑");
     log("上滑");
     // 最后一个控件的上边是2048
     swipe(bounds.centerX(), 2040, bounds.centerX(), bounds.centerY(), 1000);
+}
+
+/**
+ * @name: 领奖
+ * @test: test font
+ * @msg: 
+ * @param {type} 
+ * @return: 
+ */
+function reward(){
+    className("android.widget.TextView").text("我的").findOne().parent().click();
+    toast("进入我的");
+    log("进入我的");
+    sleep(1000);
+    
+    className("android.widget.TextView").text("威望").findOne().click();
+    toast("进入签到");
+    log("进入签到");
+    sleep(1000);
+    
+    let bounds = className("android.widget.TextView").textContains("分享3篇好文").findOne().parent().parent().child(2).bounds();
+    click(bounds.centerX(), bounds.centerY());
+    toast("进入做任务");
+    log("进入做任务");
+    sleep(1000);
+
+    className("android.widget.TextView").text("领取奖励").findOne().click();
+    toast("领取奖励");
+    log("领取奖励");
 }
