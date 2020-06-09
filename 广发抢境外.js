@@ -4,11 +4,10 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-09 09:59:49
+ * @LastEditTime: 2020-06-09 13:17:50
  */ 
 auto.waitFor();
 
-/* 云闪付APP控件没有click事件，只能通过坐标 */
 setScreenMetrics(device.width, device.height);
 
 let bounds = className("android.widget.Button").findOne().bounds();

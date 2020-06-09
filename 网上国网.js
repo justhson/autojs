@@ -8,6 +8,8 @@
  */ 
 auto.waitFor();
 
+setScreenMetrics(device.width, device.height);
+
 /* 通过APP名称打开 */
 // let appName = "网上国网";
 // launchApp(appName);

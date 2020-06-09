@@ -8,7 +8,6 @@
  */ 
 auto.waitFor();
 
-/* 云闪付APP控件没有click事件，只能通过坐标 */
 setScreenMetrics(device.width, device.height);
 
 /* 通过APP名称打开 */

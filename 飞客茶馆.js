@@ -4,9 +4,11 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-09 11:02:10
+ * @LastEditTime: 2020-06-09 14:13:07
  */ 
 auto.waitFor();
+
+setScreenMetrics(device.width, device.height);
 
 /* 通过APP名称打开 */
 // let appName = "飞客茶馆";
@@ -16,16 +18,16 @@ auto.waitFor();
 // let PackageName = getPackageName(appName);
 // log(PackageName);
 let packageName = "com.ideal.flyerteacafes";
-// launch(packageName);
-// toast("打开");
-// log("打开");
-// sleep(5000);
+launch(packageName);
+toast("打开");
+log("打开");
+sleep(5000);
 
-// sign();
+sign();
 
-// back();
+back();
 
-// share();
+share();
 
 reward();
 
@@ -67,7 +69,7 @@ function sign(){
  * @param {type} 
  * @return: 
  */
-function share(i){
+function share(){
     className("android.widget.TextView").text("信用卡").findOne().parent().click();
     toast("进入信用卡");
     log("进入信用卡");
@@ -127,10 +129,10 @@ function doShare(i){
     sleep(2000);
 
     bounds = className("android.widget.TextView").id("title").findOne().parent().bounds();
-    toast("上滑");
-    log("上滑");
     // 最后一个控件的上边是2048
     swipe(bounds.centerX(), 2040, bounds.centerX(), bounds.centerY(), 1000);
+    toast("上滑");
+    log("上滑");
 }
 
 /**

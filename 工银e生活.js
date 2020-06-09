@@ -4,9 +4,11 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-08 11:00:03
+ * @LastEditTime: 2020-06-09 13:35:13
  */ 
 auto.waitFor();
+
+setScreenMetrics(device.width, device.height);
 
 /* 通过APP名称打开 */
 // let appName = "工银e生活";

@@ -8,6 +8,8 @@
  */ 
 auto.waitFor();
 
+setScreenMetrics(device.width, device.height);
+
 /* 通过APP名称打开 */
 // let appName = "融e购";
 // launchApp(appName);

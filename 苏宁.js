@@ -4,9 +4,11 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-09 12:04:03
+ * @LastEditTime: 2020-06-09 13:18:17
  */ 
 auto.waitFor();
+
+setScreenMetrics(device.width, device.height);
 
 /* 通过APP名称打开 */
 // let appName = "苏宁易购";
