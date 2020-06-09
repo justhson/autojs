@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-08 16:08:07
+ * @LastEditTime: 2020-06-09 11:30:58
  */ 
 auto.waitFor();
 
@@ -21,6 +21,12 @@ toast("打开");
 log("打开");
 sleep(5000);
 
+if(className("android.widget.ImageView").id("marketing_cancel_img").exists()){
+    className("android.widget.ImageView").id("marketing_cancel_img").findOne().click();
+    toast("进入天天领钱");
+    log("进入天天领钱");
+    sleep(1000);
+}
 
 let bounds = className("android.widget.TextView").text("现金签到").findOne().bounds();
 click(bounds.centerX(), bounds.centerY());
