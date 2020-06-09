@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-08 15:44:34
+ * @LastEditTime: 2020-06-09 12:03:16
  */ 
 auto.waitFor();
 
@@ -20,6 +20,13 @@ launch(packageName);
 toast("打开");
 log("打开");
 sleep(5000);
+
+if(className("android.widget.RelativeLayout").id("home_market_close_layout").exists()){
+    className("android.widget.RelativeLayout").id("home_market_close_layout").findOne().click();
+    toast("关闭广告");
+    log("关闭广告");
+    sleep(1000);
+}
 
 className("android.widget.TextView").text("天天领钱").findOne().parent().click();
 toast("进入天天领钱");
