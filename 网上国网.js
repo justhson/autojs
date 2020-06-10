@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 17:08:40
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-06 11:59:35
+ * @LastEditTime: 2020-06-10 09:46:37
  */ 
 auto.waitFor();
 
@@ -23,10 +23,10 @@ toast("打开");
 log("打开");
 sleep(5000);
 
-className("android.widget.TextView").text("签到").findOne().parent().child(0).click();
+className("android.widget.ImageView").id("im_view_signin").findOne().click();
 toast("进入签到");
 log("进入签到");
-sleep(2000);
+sleep(3000);
 
 if(textContains("签到成功").exists()){
     toast("今日已签到");
