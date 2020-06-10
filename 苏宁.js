@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-09 13:18:17
+ * @LastEditTime: 2020-06-10 09:33:17
  */ 
 auto.waitFor();
 
@@ -21,7 +21,7 @@ let packageName = "com.suning.mobile.ebuy";
 launch(packageName);
 toast("打开");
 log("打开");
-sleep(5000);
+sleep(7000);
 
 if(className("android.widget.ImageView").id("marketing_cancel_img").exists()){
     className("android.widget.ImageView").id("marketing_cancel_img").findOne().click();
