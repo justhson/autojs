@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-10 16:56:50
+ * @LastEditTime: 2020-06-10 17:08:49
  */ 
 auto.waitFor();
 
@@ -91,6 +91,14 @@ function share(i, packageNameWX, packageNamePAKDYH){
     toast("主微信");
     log("主微信");
     sleep(3000);
+
+    if(className("android.widget.TextView").text("自己").exists()){
+        bounds = className("android.widget.TextView").text("自己").findOne().bounds();
+        press(bounds.centerX(), bounds.centerY(), 1000);
+        toast("进入聊天");
+        log("进入聊天");
+        sleep(2000);
+    }
 
     for(let j=1; j<=3; j++){
         view(j);
