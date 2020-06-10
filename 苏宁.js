@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-10 09:33:17
+ * @LastEditTime: 2020-06-10 09:40:19
  */ 
 auto.waitFor();
 
@@ -30,9 +30,10 @@ if(className("android.widget.ImageView").id("marketing_cancel_img").exists()){
     sleep(1000);
 }
 
-let bounds = className("android.widget.TextView").text("现金签到").findOne().bounds();
-click(bounds.centerX(), bounds.centerY());
+// let bounds = className("android.widget.TextView").text("现金签到").findOne().bounds();
+// click(bounds.centerX(), bounds.centerY());
 
+className("android.widget.RelativeLayout").desc("现金签到").findOne().click();
 toast("进入现金签到");
 log("进入现金签到");
 toast("签到");
