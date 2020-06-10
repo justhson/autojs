@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-10 16:48:01
+ * @LastEditTime: 2020-06-10 16:51:13
  */ 
 auto.waitFor();
 
@@ -37,7 +37,7 @@ toast("进入乐分享今日推荐");
 log("进入乐分享今日推荐");
 sleep(5000);
 
-for(let i=1; i<=1; i++){
+for(let i=1; i<=10; i++){
     share(i, packageNameWX, packageNamePAKDYH);
 }
 
@@ -64,7 +64,7 @@ function share(i, packageNameWX, packageNamePAKDYH){
     className("android.widget.TextView").text("微信").findOne().parent().click();
     toast("主微信");
     log("主微信");
-    sleep(2000);
+    sleep(5000);
 
     let bounds = className("android.widget.TextView").text("自己").findOne().bounds();
     click(bounds.centerX(), bounds.centerY());
