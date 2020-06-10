@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-10 16:51:13
+ * @LastEditTime: 2020-06-10 16:56:50
  */ 
 auto.waitFor();
 
@@ -67,10 +67,10 @@ function share(i, packageNameWX, packageNamePAKDYH){
     sleep(5000);
 
     let bounds = className("android.widget.TextView").text("自己").findOne().bounds();
-    click(bounds.centerX(), bounds.centerY());
+    press(bounds.centerX(), bounds.centerY(), 1000);
     toast("选择分享人");
     log("选择分享人");
-    sleep(1000);
+    sleep(2000);
 
     className("android.widget.Button").text("分享").findOne().click();
     toast("分享");
@@ -91,11 +91,6 @@ function share(i, packageNameWX, packageNamePAKDYH){
     toast("主微信");
     log("主微信");
     sleep(3000);
-
-    className("android.view.View").text("自己").findOne().parent().parent().parent().parent().click();
-    toast("进入聊天");
-    log("进入聊天");
-    sleep(2000);
 
     for(let j=1; j<=3; j++){
         view(j);
