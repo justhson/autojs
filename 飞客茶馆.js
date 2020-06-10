@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-09 14:13:07
+ * @LastEditTime: 2020-06-10 09:28:00
  */ 
 auto.waitFor();
 
@@ -122,6 +122,9 @@ function doShare(i){
     toast("返回帖子");
     log("返回帖子");
     sleep(2000);
+
+    // TODO 明天测试弹窗广告
+    exit();
 
     back();
     toast("返回信用卡");
