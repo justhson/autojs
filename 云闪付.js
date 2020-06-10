@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-08 11:00:46
+ * @LastEditTime: 2020-06-10 09:52:07
  */ 
 auto.waitFor();
 
@@ -46,12 +46,12 @@ exit();
 
 function chouJiang(){
     if(className("android.widget.TextView").text("去抽奖").exists()){
-        bounds = className("android.widget.TextView").text("去抽奖").findOne().parent().bounds();
+        let bounds = className("android.widget.TextView").text("去抽奖").findOne().parent().bounds();
         click(bounds.centerX(), bounds.centerY());
         toast("进入抽奖");
         log("进入抽奖");
     
-        bounds = className("android.widget.Image").id("drawMainWheel").findOne().bounds();
+        bounds = className("android.widget.Image").idContains("drawMainWheel").findOne().bounds();
         click(bounds.centerX(), bounds.centerY());
         toast("抽奖");
         log("抽奖");
