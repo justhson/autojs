@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-10 09:28:00
+ * @LastEditTime: 2020-06-11 12:54:40
  */ 
 auto.waitFor();
 
@@ -123,8 +123,12 @@ function doShare(i){
     log("返回帖子");
     sleep(2000);
 
-    // TODO 明天测试弹窗广告
-    exit();
+    if(className("android.widget.ImageView").id("close").exists()){
+        className("android.widget.ImageView").id("close").findOne().click();
+        toast("关闭弹窗");
+        log("关闭弹窗");
+        sleep(1000);
+    }
 
     back();
     toast("返回信用卡");

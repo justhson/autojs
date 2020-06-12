@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-10 17:08:49
+ * @LastEditTime: 2020-06-11 14:23:42
  */ 
 auto.waitFor();
 
@@ -20,22 +20,22 @@ setScreenMetrics(device.width, device.height);
 let packageNameWX = "com.tencent.mm";
 let packageNamePAKDYH = "com.pingan.paces.ccms";
 
-let bounds = className("android.view.View").idContains("z696483").findOne().bounds();
-click(bounds.centerX(), bounds.centerY());
-toast("进入乐分享");
-log("进入乐分享");
-sleep(1000);
+// let bounds = className("android.view.View").idContains("z696483").findOne().bounds();
+// click(bounds.centerX(), bounds.centerY());
+// toast("进入乐分享");
+// log("进入乐分享");
+// sleep(1000);
 
-bounds = className("android.view.View").text("积分任务").findOne().bounds();
-click(bounds.centerX(), bounds.centerY());
-toast("进入乐分享玩赚积分");
-log("进入乐分享玩赚积分");
-sleep(1000);
+// bounds = className("android.view.View").text("积分任务").findOne().bounds();
+// click(bounds.centerX(), bounds.centerY());
+// toast("进入乐分享玩赚积分");
+// log("进入乐分享玩赚积分");
+// sleep(1000);
 
-className("android.view.View").text("去完成").findOne().click();
-toast("进入乐分享今日推荐");
-log("进入乐分享今日推荐");
-sleep(5000);
+// className("android.view.View").text("去完成").findOne().click();
+// toast("进入乐分享今日推荐");
+// log("进入乐分享今日推荐");
+// sleep(5000);
 
 for(let i=1; i<=10; i++){
     share(i, packageNameWX, packageNamePAKDYH);
@@ -66,7 +66,7 @@ function share(i, packageNameWX, packageNamePAKDYH){
     log("主微信");
     sleep(5000);
 
-    let bounds = className("android.widget.TextView").text("自己").findOne().bounds();
+    let bounds = text("自己").findOne().bounds();
     press(bounds.centerX(), bounds.centerY(), 1000);
     toast("选择分享人");
     log("选择分享人");
@@ -92,8 +92,8 @@ function share(i, packageNameWX, packageNamePAKDYH){
     log("主微信");
     sleep(3000);
 
-    if(className("android.widget.TextView").text("自己").exists()){
-        bounds = className("android.widget.TextView").text("自己").findOne().bounds();
+    if(text("自己").exists()){
+        bounds = text("自己").findOne().bounds();
         press(bounds.centerX(), bounds.centerY(), 1000);
         toast("进入聊天");
         log("进入聊天");
@@ -132,7 +132,7 @@ function share(i, packageNameWX, packageNamePAKDYH){
  * @return: 
  */
 function view(j){
-    let item = className("android.widget.TextView").text("平安口袋银行").find();
+    let item = text("平安口袋银行").find();
     let bounds = item[item.length -1].bounds();
     click(bounds.centerX(), bounds.centerY());
     toast("第"+j+"次进入外链");
