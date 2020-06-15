@@ -4,7 +4,7 @@
  * @Author: justhson
  * @Date: 2020-06-05 13:28:34
  * @LastEditors: justhson
- * @LastEditTime: 2020-06-11 14:23:42
+ * @LastEditTime: 2020-06-13 21:18:16
  */ 
 auto.waitFor();
 
@@ -94,7 +94,7 @@ function share(i, packageNameWX, packageNamePAKDYH){
 
     if(text("自己").exists()){
         bounds = text("自己").findOne().bounds();
-        press(bounds.centerX(), bounds.centerY(), 1000);
+        press(bounds.centerX(), bounds.centerY(), 1);
         toast("进入聊天");
         log("进入聊天");
         sleep(2000);
@@ -132,9 +132,10 @@ function share(i, packageNameWX, packageNamePAKDYH){
  * @return: 
  */
 function view(j){
-    let item = text("平安口袋银行").find();
-    let bounds = item[item.length -1].bounds();
-    click(bounds.centerX(), bounds.centerY());
+    // let item = className("android.widget.TextView").text("平安口袋银行").find();
+    // let bounds = item[item.length -1].bounds();
+    // click(bounds.centerX(), bounds.centerY());
+    click(400, 2000);
     toast("第"+j+"次进入外链");
     log("第"+j+"次进入外链");
     sleep(5000);
@@ -142,5 +143,5 @@ function view(j){
     back();
     toast("第"+j+"次返回");
     log("第"+j+"次返回");
-    sleep(1000);
+    sleep(5000);
 }
